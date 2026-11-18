@@ -1,0 +1,51 @@
+{
+    "name": "ozioma/otp",
+    "description": "Framework-independent one-time password generation and verification for PHP, with optional Laravel integration.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["otp", "one-time-password", "authentication", "php", "laravel", "verification"],
+    "require": {
+        "php": "^8.2",
+        "ext-hash": "*"
+    },
+    "suggest": {
+        "laravel/framework": "Required only when using the optional Laravel integration (Laravel 11, 12 or 13).",
+        "ext-pdo": "Required only when using the supplied PDO storage adapters.",
+        "ext-pdo_mysql": "Required when using the PDO adapter with MySQL.",
+        "ext-pdo_pgsql": "Required when using the PDO adapter with PostgreSQL.",
+        "ext-pdo_sqlite": "Required when using the PDO adapter with SQLite."
+    },
+    "autoload": {
+        "psr-4": {
+            "Ozioma\\Otp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ozioma\\Otp\\Tests\\": "tests/"
+        },
+        "classmap": [
+            "tests/Fixtures/InMemoryAdapters.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ozioma\\Otp\\Laravel\\OtpServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5 || ^11.0 || ^12.0",
+        "orchestra/testbench": "^9.0 || ^10.0 || ^11.0"
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:unit": "phpunit --testsuite=unit",
+        "test:integration": "phpunit --testsuite=integration",
+        "test:smoke": "php tests/run.php"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
