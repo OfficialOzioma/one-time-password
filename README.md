@@ -1,4 +1,4 @@
-# Ozioma OTP
+# One-time password (OTP)
 
 A reusable, framework-independent one-time password (OTP) engine for PHP applications, with an optional Laravel integration.
 
