@@ -3,6 +3,7 @@
     "description": "Framework-independent one-time password generation and verification for PHP, with optional Laravel integration.",
     "type": "library",
     "license": "MIT",
+    "version":"1.0.1",
     "keywords": ["otp", "one-time-password", "authentication", "php", "laravel", "verification"],
     "require": {
         "php": "^8.2",
